@@ -1,4 +1,5 @@
 #                Project 4: Scalability
+Tests were ran on Duke virtual machine with Ubuntu 16.
 
 ## How to run the server:
 
