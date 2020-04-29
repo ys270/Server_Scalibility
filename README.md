@@ -1,6 +1,8 @@
 #                Project 4: Scalability
 Tests were ran on Duke virtual machine with Ubuntu 16.
 
+For detailed requirement, please go to [hw4.pdf](https://github.com/ys270/Server_Scalibility/blob/master/hw4.pdf)
+
 ## How to run the server:
 
 ##### Steps to run the server
