@@ -1,0 +1,5 @@
+1.After server finishes working and quits, the client will not quit. We need to manually press ctrl-C to quit the client side. The reason is that in order to saturate server, we wrap the connection of client to server inside a while loop. In that case, even the server stops working, client threads will keep trying to connect.\
+2.We could have only locked one bucket when operating on it, which can reduce the blocking time, compared with locking whole vector. Such a decrement would improve performance.\
+3.When using the variable \'93reqCount\'94 to count the number of request from client, we used a lock to avoid race condition. However, we could also use atomic operation to increase this variable, which will reduce the overhead caused by mutex lock.\
+4.When dealing with the vector that represent buckets, we passed a reference of vector instead of passing a copy. Such operation can reduce the overhead, compared with dealer the vector as a global variable.\
+5.We can also improve our code by using smarter pointer or lck_guard, which comply to RAII.\
